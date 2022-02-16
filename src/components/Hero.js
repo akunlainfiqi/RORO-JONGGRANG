@@ -4,7 +4,6 @@ import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { ReactComponent as Logo } from './logo.svg'
 import { 
-    BrowserRouter as Router,
     Link,
 } from 'react-router-dom'
 
