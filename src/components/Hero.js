@@ -7,12 +7,11 @@ import {
     Link,
 } from 'react-router-dom'
 
-const navigation = [
-  { name: 'Fokus Isu', to: '/isu' },
-  { name: 'Artikel', to: '/artikel' },
-  { name: 'Edukasi', to: '/edukasi' },
-  { name: 'About Us', to: '/about'}
-]
+// const navigation = [
+//   { name: 'Fokus Isu', to: '/isu' },
+//   { name: 'Artikel', to: '/artikel' },
+//   { name: 'Edukasi', to: '/edukasi' },
+// ]
 
 export default function Example() {
   return (
@@ -47,13 +46,13 @@ export default function Example() {
                   </div>
                 </div>
                     <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
-                    {navigation.map((item) => (
+                    {/* {navigation.map((item) => (
                         <Link key={item.name} to={item.to} className="font-medium text-gray-500 hover:text-gray-900">
                         {item.name}
                         </Link>
-                    ))}
-                    <Link to="/" className="font-medium text-green-600 hover:text-green-500">
-                        Log in
+                    ))} */}
+                    <Link to="/About" className="font-medium text-green-600 hover:text-green-500">
+                        About
                     </Link>
                     </div>
               </nav>
@@ -75,11 +74,7 @@ export default function Example() {
                 <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
                   <div className="px-5 pt-4 flex items-center justify-between">
                     <div>
-                      <img
-                        className="h-8 w-auto"
-                        src="./logo.svg"
-                        alt=""
-                      />
+                      <Logo className="h-8 w-auto sm:h-10"></Logo>
                     </div>
                     <div className="-mr-2">
                       <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500">
@@ -88,7 +83,7 @@ export default function Example() {
                       </Popover.Button>
                     </div>
                   </div>
-                  <div className="px-2 pt-2 pb-3 space-y-1">
+                  {/* <div className="px-2 pt-2 pb-3 space-y-1">
                     {navigation.map((item) => (
                       <a
                         key={item.name}
@@ -98,12 +93,12 @@ export default function Example() {
                         {item.name}
                       </a>
                     ))}
-                  </div>
+                  </div> */}
                   <a
-                    href="#"
+                    href="/About"
                     className="block w-full px-5 py-3 text-center font-medium text-green-600 bg-gray-50 hover:bg-gray-100"
                   >
-                    Log in
+                    About Us
                   </a>
                 </div>
               </Popover.Panel>
@@ -113,7 +108,7 @@ export default function Example() {
           <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
             <div className="sm:text-center lg:text-left">
               <h1 className="text-2xl tracking-tight font-extrabold text-gray-900 sm:text-3xl md:text-4xl">
-                <span className="block md:inline">Apakah anda menadari bahwa iklim di</span>{' '}
+                <span className="block md:inline">Apakah anda menyadari bahwa iklim di</span>{' '}
                 <span className="block text-green-600 md:inline">seluruh penjuru dunia telah berubah?</span>
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
@@ -121,16 +116,16 @@ export default function Example() {
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md shadow">
-                  <a
-                    href="#"
+                  <Link
+                    to="/Pembakaran"
                     className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 md:py-4 md:text-lg md:px-4"
                   >
-                    Pembukaan Hutan
-                  </a>
+                    Pembakaran Hutan
+                  </Link>
                 </div>
                 <div className="mt-3 sm:mt-0 sm:ml-3">
                   <a
-                    href="#"
+                    href="/Fossil"
                     className="w-full flex items-center justify-center px-3 py-3 border border-transparent text-base font-medium rounded-md text-green-700 bg-green-100 hover:bg-green-200 md:py-4 md:text-lg md:px-4"
                   >
                     Penggunaan Bahan Bakar Fossil
